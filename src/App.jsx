@@ -14,9 +14,12 @@ import './index.css';
 
 //Функции//
 import Api from "./api"
+import Ctx from "./context";
 
 function App() {
 
+
+  
   const [token, setToken] = useState(localStorage.getItem("travelBlogToken"));
   const [api, setApi] = useState(new Api(token));
 
