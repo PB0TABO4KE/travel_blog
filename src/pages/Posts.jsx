@@ -1,6 +1,17 @@
 import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import AppCtx from "../context";
 
 function Posts(postauthor, favorite) {
+
+    const {
+        token,
+        setToken,
+        api,
+        setApi,
+        user,
+        setUserId
+    } = useContext(AppCtx);
 
     const { author } = useParams()
 

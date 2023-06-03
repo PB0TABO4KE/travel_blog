@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Api from "../api"
+import AppCtx from "../context"
 
 
 function Auth() {
-
-    const [token, setToken] = useState(localStorage.getItem("travelBlogToken"));
-    const [user, setUser] = useState(localStorage.getItem("travelBlogUser"));
-    const [userId, setUserId] = useState(localStorage.getItem("travelBlogId"));
-    const [api, setApi] = useState(new Api(token));
+    const {
+        token,
+        setToken,
+        api,
+        setApi,
+        user,
+        setUserId
+    } = useContext(AppCtx);
 
     // Переменные для регистрации//
     const [regName, setRegName] = useState("");
@@ -18,8 +22,8 @@ function Auth() {
     //Переменные для авторизации//
     const [email, setEmail] = useState("");
     const [pwd, setPwd] = useState("");
-    const [auth, setAuth] = useState(true);
 
+    //Функция для очистки формы//
     const clearForm = () => {
         setRegName("");
         setRegEmail("");
@@ -28,11 +32,6 @@ function Auth() {
         setEmail("");
         setPwd("");
     }
-
-    useEffect(() => {
-        setApi(new Api(token))
-    }, [token])
-
 
     useEffect(() => {
         if (user) {

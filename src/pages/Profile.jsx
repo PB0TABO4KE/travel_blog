@@ -1,24 +1,22 @@
-import { useState, useEffect } from "react";
+import { useEffect, useContext } from "react";
 
 //Стили//
 import './index.css';
 
 //Функции//
 import Api from "../api"
+//Контексты//
+import AppCtx from "../context"
 
 
 function Profile() {
 
-    const token = localStorage.getItem("travelBlogToken");
-    const [api, setApi] = useState(new Api(token));
-    const [userInfo, setUserInfo] = useState({});
-
-
-    useEffect(() => {
-        setApi(new Api(token))
-    }, [token])
-
-
+    const {
+        token,
+        api,
+        userInfo,
+        setUserInfo
+    } = useContext(AppCtx);
 
     useEffect(() => {
 

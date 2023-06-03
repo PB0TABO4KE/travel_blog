@@ -1,18 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
 
 //Стили//
 import './index.css';
 
-//Функции//
-import Api from "../api"
-
+//Контексты//
+import AppCtx from "../context"
 
 
 function CurrentPost() {
 
+    const {
+        token,
+        api
+    } = useContext(AppCtx);
 
-    const [token, setToken] = useState(localStorage.getItem("travelBlogToken"));
-    const [api, setApi] = useState(new Api(token));
+    
+
+
     const [currentPost, setCurrentPost] = useState({});
     const [currentPostComments, setCurrentPostComments] = useState([]);
     const [currentPostLikes, setCurrentPostLikes] = useState([]);
@@ -22,6 +27,7 @@ function CurrentPost() {
 
     //Заглушка//
     let postId = ("6478d8aee0bf2c519bd0ffdd");
+    //const { postId } = useParams()//
 
 
 
