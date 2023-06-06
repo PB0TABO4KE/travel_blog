@@ -7,23 +7,23 @@ function NavbarFooter() {
 		<>
 			<Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
 				<Container className='footer'>
-					<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+					<Navbar.Brand href="#home">Travel Blog</Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="me-auto">
 						</Nav>
 						<Nav>
-							<Nav.Link eventKey={2} href="#memes">
-								ГЛАВНАЯ
+							<Nav.Link eventKey={2} href="/">
+								Главная
 							</Nav.Link>
 							<Nav.Link eventKey={3} href="#memes">
 								КАТЕГОРИИ
 							</Nav.Link>
-							<Nav.Link eventKey={4} href="#memes">
-								ПОСТЫ
+							<Nav.Link eventKey={4} href="/posts">
+								Все посты
 							</Nav.Link>
-							<Nav.Link eventKey={5} href="#assa">
-								КОНТАКТЫ
+							<Nav.Link eventKey={5} href="/contacts">
+								Контакты
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>

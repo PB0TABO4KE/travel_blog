@@ -11,10 +11,10 @@ import "./navbar.css"
 function NavbarMenu() {
   return (
     <Row className='navbar'>
-{['lg'].map((expand) => (
+      {['lg'].map((expand) => (
         <Navbar key={expand} bg="opacity-100" expand={expand} className="mb-3">
           <Container fluid>
-            <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+            <Navbar.Brand href="/">Travel Blog</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -23,26 +23,38 @@ function NavbarMenu() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  Travel Blog
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
+                  <Nav.Link href="/">Главная</Nav.Link>
+                  <Nav.Link href="/posts/favorites">Популярное</Nav.Link>
+                  <Nav.Link href="/posts">Все посты</Nav.Link>
+                  <Nav.Link href="/contacts">Контакты</Nav.Link>
+                  <Nav.Link href="/profile">Профайл</Nav.Link>
+
+
+
+
                   <NavDropdown
-                    title="Dropdown"
+                    title="Выпадающее меню"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action3">
+                      1 пункт
+                    </NavDropdown.Item>
                     <NavDropdown.Item href="#action4">
-                      Another action
+                      2 пункт
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action5">
-                      Something else here
+                      Ещё какой-то пункт
                     </NavDropdown.Item>
                   </NavDropdown>
+
+
+
                 </Nav>
                 <Form className="d-flex">
                   <Form.Control

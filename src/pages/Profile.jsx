@@ -3,8 +3,6 @@ import { useEffect, useContext } from "react";
 //Стили//
 import './index.css';
 
-//Функции//
-import Api from "../api"
 //Контексты//
 import AppCtx from "../context"
 
@@ -19,7 +17,6 @@ function Profile() {
     } = useContext(AppCtx);
 
     useEffect(() => {
-
         api.getProfile()
             .then(data => {
                 if (!data.err) {
