@@ -78,7 +78,7 @@ function App() {
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/favorites" element={<Posts favorite={true} />} />
           <Route path="/posts/author/:author" element={<Posts />} />
-          <Route path="/post/:id" element={<CurrentPost />} />
+          <Route path="/post/:postId" element={<CurrentPost />} />
           <Route path="/post/add" element={<AddPost />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/auth" element={<Auth />} />
@@ -90,7 +90,7 @@ function App() {
         </Row>
       </Container>
 
-
+{/*
       <ul className="menu">
         <li><Link to="/">Главная</Link></li>
         <li><Link to="/posts">Посты</Link>
@@ -99,11 +99,11 @@ function App() {
             <li><Link to="/posts/favorites">Любимые посты</Link></li>
           </ul>
         </li>
-        <li><Link to="/post/:id">Конкретный пост</Link></li>
+        <li><Link to="/post/:postId">Конкретный пост</Link></li>
         <li><Link to="/post/add">Добавить товар</Link></li>
         <li><Link to="/profile">Личный кабинет</Link></li>
         <li><Link to="/auth">Войти/Авторизация</Link></li>
-      </ul>
+  </ul>*/}
 
     </AppCtx.Provider>
   </>

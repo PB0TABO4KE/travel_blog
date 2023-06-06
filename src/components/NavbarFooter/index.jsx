@@ -7,7 +7,7 @@ function NavbarFooter() {
 		<>
 			<Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
 				<Container className='footer'>
-					<Navbar.Brand href="#home">Travel Blog</Navbar.Brand>
+					<Navbar.Brand href="/">Travel Blog</Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="me-auto">
@@ -16,8 +16,8 @@ function NavbarFooter() {
 							<Nav.Link eventKey={2} href="/">
 								Главная
 							</Nav.Link>
-							<Nav.Link eventKey={3} href="#memes">
-								КАТЕГОРИИ
+							<Nav.Link eventKey={3} href="/posts/favorites">
+								Популярное
 							</Nav.Link>
 							<Nav.Link eventKey={4} href="/posts">
 								Все посты

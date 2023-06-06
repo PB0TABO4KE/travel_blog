@@ -10,23 +10,23 @@ import AppCtx from "../context"
 
 function CurrentPost() {
 
+    const { postId } = useParams();
+    
     const {
         token,
         api
     } = useContext(AppCtx);
 
-    
-
-
     const [currentPost, setCurrentPost] = useState({});
     const [currentPostComments, setCurrentPostComments] = useState([]);
     const [currentPostLikes, setCurrentPostLikes] = useState([]);
     const [currentPostTags, setCurrentPostTags] = useState([]);
+    
 
 
 
     //Заглушка//
-    let postId = ("6478d8aee0bf2c519bd0ffdd");
+    // let postId = ("6478d8aee0bf2c519bd0ffdd"); // 
     //const { postId } = useParams()//
 
 
